@@ -3,6 +3,7 @@ CC = gcc
 CROSS_COMPILE = aarch64-none-linux-gnu
 CFLAGS = -Wall -Wextra
 LDFLAGS=
+all: CROSS_COMPILE
 
 writer: writer.c
 	$(CC) writer.c -o writer
