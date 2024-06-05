@@ -1,12 +1,15 @@
-CROSS_COMPILE = gcc
-CFLAGS=-g -Wall 
+CROSS_COMPILE = aarch64-none-linux-gnu
+CFLAGS = -Wall -Wextra -Werror
+CC = gcc
 
 
 all: aesdsocket
-default: aesdsocket
 
 aesdsocket: aesdsocket.c
-	$(CROSS_COMPILE) $(CFLAGS) aesdsocket.c -o aesdsocket
+	$(CC) $(CFLAGS) aesdsocket.c -o aesdsocket
+
+CROSS_COMPILE: aesdsocket.c
+	$(CROSS_COMPILE)-$(CC) $(CFLAGS) aesdsocket.c -o aesdsocket
 
 clean:
 	rm -rf aesdsocket *.o
