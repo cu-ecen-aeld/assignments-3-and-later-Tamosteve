@@ -1,4 +1,5 @@
-#include<signal.h>
+#include <signal.h>
+#include <sys/stat.h>
 #include <stdio.h> // IWYU pragma: keep.
 #include <stdlib.h> // IWYU pragma: keep.
 #include <string.h> // IWYU pragma: keep.
